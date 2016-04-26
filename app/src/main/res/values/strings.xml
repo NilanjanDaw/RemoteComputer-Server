@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">RemoteComputer</string>
+    <string name="ipAddress">Enter IP Address</string>
+    <string name="IPAddressLabel">IP Address:</string>
+    <string name="leftClick">Left Click</string>
+    <string name="rightClick">Right Click</string>
+    <string name="portLabel">Port:</string>
+    <string name="portHint">Enter the Port</string>
+    <string name="connect">Connect</string>
+    <string name="IPAddress">192.168.173.1</string>
+</resources>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/connector"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" >
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/ip"
+            android:layout_alignParentTop="true"
+            android:hint="@string/ipAddress"
+            android:layout_toEndOf="@+id/textView"
+            android:layout_toRightOf="@+id/textView"
+            android:text="@string/IPAddress" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/port"
+            android:hint="@string/portHint"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:text="8080"
+            android:layout_toEndOf="@+id/textView2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/IPAddressLabel"
+            android:id="@+id/textView"
+            android:layout_alignBottom="@+id/ip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/highlighted_text_material_light"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/portLabel"
+            android:id="@+id/textView2"
+            android:textColor="@color/highlighted_text_material_light"
+            android:textSize="25sp"
+            android:layout_above="@+id/connect"
+            android:layout_toRightOf="@+id/ip"
+            android:layout_toEndOf="@+id/ip" />
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/connect"
+            android:id="@+id/connect"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="italic"
+            android:layout_below="@+id/ip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/connector"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/screenPad">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/imageView"
+            android:layout_gravity="center" />
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="64dp"
+            android:text="Left Click"
+            android:id="@+id/leftClick"
+            android:layout_gravity="left|bottom"
+            android:alpha="0.5" />
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="64dp"
+            android:text="Right Click"
+            android:id="@+id/rightClick"
+            android:layout_gravity="right|bottom"
+            android:layout_alignParentEnd="true"
+            android:alpha="0.5" />
+
+    </FrameLayout>
+
+</RelativeLayout>
