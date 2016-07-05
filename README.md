@@ -14,6 +14,12 @@ Folder RemoteComputerServer contains the server-side code. The code is written e
     2. Run the server using the command: `java remoteComputer.ComputerManager`
   </p>
 </p>
+
+## First Alpha Release
+A pre-release distribution has been added under the Release Section. 
+Use it to run the code as `java -jar remoteComputer.ComputerManager.jar`
+<p></p>
+</br>
 <b>Client Side code: <a href="https://github.com/NilanjanDaw/RemoteComputer-Client">Client Side</a></b>
 </br>
 <b> The project has been tested using a Computer System running Windows 10, which acted as the target Server and a 
