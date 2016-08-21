@@ -7,19 +7,19 @@ import java.io.IOException;
 import java.net.Socket;
 
 public class MouseManager extends Thread {
-	
+
 	private DataInputStream in;
 	private DataOutputStream out;
 	private Socket socket;
 	private String s="";
 	private remouse rem;
-	
+
 	/**
 	 * Constructor to initialize class variables
 	 * @param socket The socket over which mouse event data will be transferred
 	 */
 	public MouseManager(Socket socket) {
-		
+
 		this.socket = socket;
 		try {
 			this.in = new DataInputStream(socket.getInputStream());
@@ -42,7 +42,7 @@ public class MouseManager extends Thread {
 			 {
 					String y=in.readUTF();
 					if(y.length()!=0){
-						
+
 						if(y.equalsIgnoreCase("Mouse UP")){
 							rem.getLocation();
 						}
@@ -79,7 +79,6 @@ public class MouseManager extends Thread {
 					return;
 				}
 			 }
-		 }
-		 
+		 } 
 	}
 }

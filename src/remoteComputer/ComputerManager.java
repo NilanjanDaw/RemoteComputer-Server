@@ -6,12 +6,12 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class ComputerManager extends Thread {
-	
+
 	 ServerSocket serverSocketImage, serverSocketMouse;
 	 Socket socketImage = null,socketMouse = null ;
 	 String s="";
 	 /**
-	  * Constructor to initialize class variables 
+	  * Constructor to initialize class variables
 	  * @param port The ports to listen to. port and port + 1
 	  * @throws IOException
 	  * @throws AWTException
@@ -22,7 +22,7 @@ public class ComputerManager extends Thread {
 		 serverSocketMouse = new ServerSocket(port);
 		 serverSocketMouse.setSoTimeout(10000);
 	 }
-	 
+
 	 /**
 	  * Method to handle the connection with remote client
 	  */
@@ -43,7 +43,7 @@ public class ComputerManager extends Thread {
 					 ScreenManager screenManager = new ScreenManager(socketImage);
 					 mouseManager.start();
 					 screenManager.start();
-					 
+
 				 }
 			 catch(Exception e)
 			 {
@@ -63,10 +63,10 @@ public class ComputerManager extends Thread {
 			 }
 		 }
 	 }
-	 
+
 	 public static void main(String args[]) {
-		 
-		 int port=8081;
+
+		 int port = (args.length > 0) ? Integer.parseInt(args[0]): 8081;
 		 Thread t;
 		try {
 			t = new ComputerManager(port);
@@ -77,4 +77,3 @@ public class ComputerManager extends Thread {
 		}
 	 }
 }
-
