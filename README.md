@@ -1,5 +1,8 @@
 # RemoteComputer
 This project allows an user to fully control a computer remotely over a wi-fi network using an android mobile phone.
+
+## Build Integration status
+[![Build Status](https://travis-ci.org/NilanjanDaw/RemoteComputer-Server.svg?branch=master)](https://travis-ci.org/NilanjanDaw/RemoteComputer-Server)
 <br>
 ## Server Side
 <p>
